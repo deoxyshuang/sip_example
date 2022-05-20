@@ -44,14 +44,14 @@ class _MyRegisterWidget extends State<RegisterWidget>
     _preferences = await SharedPreferences.getInstance();
     this.setState(() {
       _wsUriController.text =
-          _preferences.getString('ws_uri') ?? 'wss://tryit.jssip.net:10443';
+          _preferences.getString('ws_uri') ?? 'ws://192.168.0.3:5060';
       _sipUriController.text =
-          _preferences.getString('sip_uri') ?? 'hello_flutter@tryit.jssip.net';
+          _preferences.getString('sip_uri') ?? 'bear@officesip.local';
       _displayNameController.text =
-          _preferences.getString('display_name') ?? 'Flutter SIP UA';
-      _passwordController.text = _preferences.getString('password') ?? '';
+          _preferences.getString('display_name') ?? 'bear';
+      _passwordController.text = _preferences.getString('password') ?? 'bear';
       _authorizationUserController.text =
-          _preferences.getString('auth_user') ?? '';
+          _preferences.getString('auth_user') ?? 'bear';
     });
   }
 
